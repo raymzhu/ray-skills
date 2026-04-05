@@ -1,0 +1,17 @@
+{
+  "name": "poster-design",
+  "version": "1.0.0",
+  "description": "一句话生成大师级 Mondo 风格海报、书籍封面、专辑封面",
+  "author": {
+    "name": "raymzhu",
+    "url": "https://github.com/raymzhu"
+  },
+  "repository": "https://github.com/raymzhu/ray-skills",
+  "keywords": [
+    "poster",
+    "design",
+    "book-cover",
+    "album-cover"
+  ],
+  "skills": "./skills"
+}
