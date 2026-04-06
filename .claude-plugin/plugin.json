@@ -1,5 +1,11 @@
 {
-  "name": "poster-design",
-  "description": "Generate Mondo-style posters, book covers, and album art",
-  "version": "1.0.0"
+  "name": "ray-skills",
+  "version": "1.0.0",
+  "description": "Raymond's personal skills collection",
+  "author": {
+    "name": "raymzhu",
+    "url": "https://github.com/raymzhu"
+  },
+  "repository": "https://github.com/raymzhu/ray-skills",
+  "keywords": ["skills", "poster", "design"]
 }

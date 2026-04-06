@@ -5,9 +5,9 @@
   },
   "plugins": [
     {
-      "name": "poster-design",
+      "name": "ray-skills",
       "source": "./",
-      "description": "Generate Mondo-style posters, book covers, and album art",
+      "description": "Raymond's personal skills collection",
       "version": "1.0.0"
     }
   ]
