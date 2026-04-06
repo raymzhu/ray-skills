@@ -19,7 +19,7 @@
       "name": "poster-design",
       "description": "一句话生成大师级 Mondo 风格海报、书籍封面、专辑封面",
       "version": "1.0.0",
-      "source": "./plugins/poster-design"
+      "source": "./"
     }
   ]
 }
