@@ -13,8 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import io
 
-# API Configuration - PipeLLM Gemini
-PIPELLM_BASE_URL = 'https://api.pipellm.ai'
+# API Configuration - Google Gemini Official
 DEFAULT_IMAGE_MODEL = 'gemini-3-pro-image-preview'   # 高质量图片模型
 
 # 30+ Design Styles: Poster Artists + Book Cover + Album Cover + Social Media
@@ -64,17 +63,15 @@ ARTIST_STYLES = {
 }
 
 def get_genai_client():
-    """创建 PipeLLM google-genai 客户端"""
+    """创建 Google Gemini 官方客户端"""
     from google import genai
-    api_key = os.getenv('PIPELLM_API_KEY')
+    api_key = os.getenv('GEMINI_API_KEY')
     if not api_key:
-        print("Error: PIPELLM_API_KEY environment variable is required.")
-        print("Please set: export PIPELLM_API_KEY=your_key")
+        print("Error: GEMINI_API_KEY environment variable is required.")
+        print("Please set: export GEMINI_API_KEY=your_key")
+        print("Get your key at: https://aistudio.google.com/apikey")
         sys.exit(1)
-    return genai.Client(
-        api_key=api_key,
-        http_options={"base_url": PIPELLM_BASE_URL}
-    )
+    return genai.Client(api_key=api_key)
 
 
 def get_format_description(aspect_ratio):
@@ -131,7 +128,7 @@ def generate_prompt(subject, design_type, style="auto", color_hint="", aspect_ra
     return prompt
 
 def generate_image(prompt, output_path=None, model=DEFAULT_IMAGE_MODEL, aspect_ratio="9:16", input_image=None):
-    """使用 PipeLLM Gemini 生成图片"""
+    """使用 Google Gemini 官方 API 生成图片"""
     client = get_genai_client()
 
     print(f"🎨 Generating with {model}")
@@ -174,9 +171,9 @@ def generate_image(prompt, output_path=None, model=DEFAULT_IMAGE_MODEL, aspect_r
 
         if not output_path:
             timestamp = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-            default_dir = os.path.expanduser("~/乔木新知识库/60-69 素材/61 AI图片/mondo-designs")
+            default_dir = os.path.expanduser("~/Desktop/poster-designs")
             os.makedirs(default_dir, exist_ok=True)
-            output_path = f"{default_dir}/mondo-{timestamp}.png"
+            output_path = f"{default_dir}/poster-{timestamp}.png"
 
         os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else '.', exist_ok=True)
         img = image_part.as_image()
