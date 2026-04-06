@@ -1,25 +1,14 @@
 {
   "name": "ray-skills",
-  "displayName": "Ray's Skills Collection",
-  "description": "Raymond's personal Claude Code skills marketplace",
-  "version": "1.0.0",
   "owner": {
-    "name": "raymzhu",
-    "url": "https://github.com/raymzhu"
+    "name": "raymzhu"
   },
-  "repository": "https://github.com/raymzhu/ray-skills",
-  "license": "MIT",
-  "keywords": [
-    "skills",
-    "poster-design",
-    "productivity"
-  ],
   "plugins": [
     {
       "name": "poster-design",
-      "description": "一句话生成大师级 Mondo 风格海报、书籍封面、专辑封面",
-      "version": "1.0.0",
-      "source": "./"
+      "source": "./",
+      "description": "Generate Mondo-style posters, book covers, and album art",
+      "version": "1.0.0"
     }
   ]
 }
