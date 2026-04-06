@@ -15,7 +15,7 @@ from pathlib import Path
 
 # API Configuration - Google Gemini Official
 API_BASE = 'https://generativelanguage.googleapis.com/v1beta'
-DEFAULT_MODEL = 'gemini-3.1-flash-image-preview'
+DEFAULT_MODEL = 'gemini-3-pro-image-preview'
 
 def get_api_key():
     """Get API key from environment variable"""
